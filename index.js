@@ -4,6 +4,7 @@ document.getElementById('newJokeBtn').addEventListener('click', getNewJoke);
 
 // creates variables and assigns their divs
 const setupDiv = document.getElementById('setup');
+const punchlineDiv = document.getElementById('punchline');
 
 // getJoke function
 async function getNewJoke() {
@@ -19,7 +20,7 @@ async function getNewJoke() {
 
     // Grabs joke punchline returned from joke array and inserts into its div
     punchline = joke[0].punchline;
-    console.log(punchline);
+    punchlineDiv.innerHTML = punchline;
 }
 
 getNewJoke();
