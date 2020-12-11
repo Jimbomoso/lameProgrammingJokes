@@ -29,5 +29,6 @@ function getPunchline() {
 }
 
 function getNewJoke() {
+    punchlineDiv.innerHTML = '';
     getJoke();
 }
