@@ -3,3 +3,12 @@ body {
     font-size: 1.5rem;
     padding: 100px;
 }
+
+button {
+    font-size: inherit;
+    cursor: pointer;
+    background: purple;
+    color: #eee;
+    padding: 10px;
+    border-radius: 5px;
+}
