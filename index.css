@@ -1,12 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
 body {
     background: rgb(26, 190, 127);
     font-size: 1.5rem;
-    padding: 100px;
+    font-family:'JetBrains Mono', monospace;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    color: #eee;
+    background: purple;
+    padding: 15px;
 }
 
 .joke {
+    background: white;
+    padding: 10px;
+    border: 50px solid white;
+    width: 50vw;
+    height: 70vh;
+}
+
+.jokeBubble {
     display: flex;
-    flex-direction: column;
+    position: relative;
+    margin: 60px;
+    height: auto;
+    background-color: #eee;
+}
+
+.setupBubble,
+.punchlineBubble {
+    margin: 5px;
+    padding: 20px;
+    /* color: white; */
+    /* background: #eee; */
+}
+
+.setupBubble::before {
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: 30px;
+    right: auto;
+    top: auto;
+    bottom: -40px;
+    border: 20px solid;
+    border-color: #eee transparent transparent #eee;
+}
+
+.setupBubble::after {
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: 38px;
+    right: auto;
+    top: auto;
+    bottom: -20px;
+    border: 12px solid;
+    border-color: #666 transparent transparent #666;
+}
+
+.punchlineBubble {
+    height: 100%;
+}
+
+.punchlineBubble::before {
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: auto;
+    right: 30px;
+    bottom: -40px;
+    border: 20px solid;
+    border-color: #eee #eee transparent transparent;
+}
+
+.punchlineBubble::after {
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: auto;
+    right: 38px;
+    bottom: -20px;
+    border: 12px solid;
+    border-color: #666 #666 transparent transparent;
 }
 
 button {
@@ -15,7 +106,6 @@ button {
     background: purple;
     color: #eee;
     padding: 10px;
-    border-radius: 5px;
-    margin-bottom: 20px;
+    border: 3px solid white;
+    margin: 40px;
 }
-
