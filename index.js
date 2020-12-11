@@ -7,7 +7,7 @@ const setupDiv = document.getElementById('setup');
 const punchlineDiv = document.getElementById('punchline');
 
 // getJoke function
-async function getNewJoke() {
+async function getJoke() {
     // fetches joke
     const jokePromise = await fetch
     ('https://official-joke-api.appspot.com/jokes/programming/random');
@@ -22,8 +22,12 @@ async function getNewJoke() {
     punchline = joke[0].punchline;
 }
 
-getNewJoke();
+getJoke();
 
 function getPunchline() {
     punchlineDiv.innerHTML = punchline;
+}
+
+function getNewJoke() {
+    getJoke();
 }
