@@ -14,10 +14,13 @@ async function getNewJoke() {
     // Consumes json data
     const joke = await jokePromise.json();
 
-    console.log(joke);
-
-    // Grabs returned joke setup and inserts into its div
+    // Grabs joke setup from returned joke array and inserts into its div
     setupDiv.innerHTML = joke[0].setup;
+
+    // Grabs joke punchline returned from joke array and inserts into its div
+    punchline = joke[0].punchline;
+    console.log(punchline);
 }
 
 getNewJoke();
+
