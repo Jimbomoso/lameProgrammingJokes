@@ -27,7 +27,7 @@ h1 {
     padding: 10px;
     border: 50px solid white;
     width: 50vw;
-    height: 70vh;
+    /* height: 70vh; */
 }
 
 .jokeBubble {
