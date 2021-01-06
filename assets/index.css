@@ -72,10 +72,6 @@ h1 {
     border-color: #666 transparent transparent #666;
 }
 
-.punchlineBubble {
-    height: 100%;
-}
-
 .punchlineBubble::before {
     content: ' ';
     position: absolute;
